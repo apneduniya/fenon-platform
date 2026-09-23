@@ -51,7 +51,7 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children, modal }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
@@ -63,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteHeader />
           {children}
           <SiteFooter />
+          {modal}
         </Providers>
       </body>
     </html>
