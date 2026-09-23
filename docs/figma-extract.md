@@ -15,6 +15,8 @@ Nodes supplied by the user:
 | Logo system | brand | `12:4` |
 | Brand overview | brand | `12:2` (not fetched) |
 | Hero isometric, dark frame | website | `0:580` |
+| Mobile footer artwork, light | website | `0:26248` |
+| Mobile footer artwork, dark | website | `0:19812` |
 
 ## Calls made (2026-09-23)
 | # | Tool | Node | Result |
@@ -25,6 +27,8 @@ Nodes supplied by the user:
 | 4 | `get_design_context` | `0:12888` | Footer geometry and small SVG assets (see below). Text outlined. |
 | 5 | `download_assets` (svg) | `12:4` | Logo system sheet plus 3 logomark SVGs (saved in the scratchpad; paths used for `components/illustrations/Logo*`). |
 | 6 | `download_assets` (svg) | `0:580` | Dark hero export saved as `public/images/hero-isometric-dark.svg` (1332×537, 85 KB). Same geometry as the light file; the page-background rect is black. |
+| 7 | `download_assets` | `0:26248` | 390×250 PNG export saved as `public/images/footer-artwork-light.png` (the raw source image is 390×251 RGB and wasn't used). |
+| 8 | `download_assets` | `0:19812` | 390×250 PNG export saved as `public/images/footer-artwork-dark.png`. |
 
 Both hero SVGs include an opaque page-background rect (white or black) that matches `--background` in each theme, so they sit seamlessly on the page.
 

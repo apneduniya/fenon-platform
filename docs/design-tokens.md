@@ -76,19 +76,24 @@ Font sizes and line heights are fluid: linear between the 390px and 1440px frame
 | `text-lede` | 14 → 16px (fluid) | 23.4 → 27px (fluid) | -0.027em | 400 | Section ledes, mobile menu |
 | `text-body` | 13 → 14px (fluid) | 22px | -0.034em | 400 | Body copy, nav, buttons |
 | `text-body-xs` | 11 → 12px (fluid) | 18px | -0.02em | 400 | Facets, notes, article links |
-| `text-body-sm` | 13px | 20px | -0.03em | 400 | Labels, announcement (desktop) |
+| `text-body-sm` | 13px | 20px | -0.03em | 400 | Form labels |
 | `text-caption` | 10.7 → 13px (fluid) | 1.4 | -0.03em | 400 | Announcement bar |
 | `text-mono-figure` | 7.8 → 13px (fluid) | 12 → 18px (fluid) | — | 400 | Hero caption + motion toggle |
 | `text-mono-md` | 10 → 13px (fluid) | 14 → 18px (fluid) | 0em | 400 | Eyebrows |
-| `text-mono-sm` | 10.7 → 11.5px (fluid) | 16px | 0em | 400 | Card eyebrows, footer ruler/labels |
+| `text-mono-sm` | 10.7 → 11.5px (fluid) | 16px | 0em | 400 | Card eyebrows |
 | `text-mono-code` | 8.6 → 10.8px (fluid) | 18 → 20.75px (fluid) | — | 400 | deployment.yaml |
 | `text-mono-code-lg` | 8.7 → 11.7px (fluid) | 19 → 24px (fluid) | — | 400 | robot_loop.py |
 | `text-mono-caption` | 10.3px | 14px | 0.04em | 400 | Uppercase captions (article category, card labels) |
-| `text-mono-link` | 10.8 → 11.7px (fluid) | 24px | — | 400 | Footer links and tagline |
+| `text-mono-link` | 10.8 → 11.7px (fluid) | 24px | — | 400 | Footer links |
 | `text-mono-xs` | 8 → 9.5px (fluid) | 13px | — | 400 | Notes, legends, statuses, IN/OUT |
 | `text-mono-micro` | 5.2 → 9.5px (fluid) | 1.3 | — | 400 | Chart captions |
-| `text-display-wordmark` | 96 → 244px (fluid) | 0.8 | 0.05em | 700 | Footer wordmark (Inter Bold) |
-| `text-mono-label` | 13px | 18px | 0.06em | 400 | Footer column titles |
+| `text-display-wordmark` | 96 → 244px (fluid) | 0.8 | 0.05em | 700 | Footer wordmark (Inter Bold, md+) |
+| `text-mono-label` | 10.6 → 13px (fluid) | 18px | 0 → 0.78px (fluid) | 400 | Footer column titles |
+| `text-mono-ruler` | 9.4 → 11.2px (fluid) | 16px | — | 400 | Footer ruler, Appearance label |
+| `text-mono-artwork` | 8 → 11.1px (fluid) | 13px | — | 400 | Footer artwork row |
+| `text-mono-bar` | 8.4 → 10.3px (fluid) | 16px | — | 400 | Footer bottom bar |
+| `text-mono-switch` | 8.9 → 10.4px (fluid) | 14px | — | 400 | Appearance switch |
+| `text-mono-tagline` | 9.75 → 11.7px (fluid) | 19.1px | — | 400 | Footer tagline |
 
 Every custom size is registered in `lib/utils.ts` (`cn` font-size class group), so `cn()` never mistakes a size for a colour. The container widths (`page`, `content`) and `gutter` spacing are registered there too. This table is generated from `styles/theme.css`; regenerate it whenever tokens change.
 

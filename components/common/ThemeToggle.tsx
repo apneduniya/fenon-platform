@@ -30,7 +30,8 @@ export function AppearanceSwitch({ label }: { label: string }) {
   ] as const
 
   return (
-    <div role="group" aria-label={label} className="inline-flex gap-1 rounded-md border border-border bg-background p-[4px]">
+    // Sizes measured from the 390 frame (126×38) and the Figma footer export (155×42).
+    <div role="group" aria-label={label} className="inline-flex gap-1 rounded-md border border-border bg-background p-[2px] md:p-1">
       {options.map(({ value, label: optionLabel, Icon, active }) => (
         <button
           key={value}
@@ -38,11 +39,11 @@ export function AppearanceSwitch({ label }: { label: string }) {
           aria-pressed={theme === value}
           onClick={() => setTheme(value)}
           className={cn(
-            "inline-flex h-8 items-center gap-2 rounded-sm px-3 font-mono text-mono-sm transition-colors hover:text-foreground",
+            "inline-flex h-8 items-center gap-[6.6px] rounded-sm pr-2 pl-[8.8px] font-mono text-mono-switch transition-colors hover:text-foreground md:gap-[8.3px] md:pr-[10px] md:pl-[12.3px]",
             active,
           )}
         >
-          <Icon className="size-3.5" />
+          <Icon className="size-[10px] md:size-[12.45px]" />
           {optionLabel}
         </button>
       ))}

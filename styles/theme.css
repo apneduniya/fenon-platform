@@ -163,10 +163,25 @@
   --text-display-wordmark--letter-spacing: 0.05em;
   --text-display-wordmark--font-weight: 700;
 
-  /* Mono label: footer column titles, tracked slightly wider than eyebrows */
-  --text-mono-label: 13px;
+  /* Footer mono roles, measured from the 390 frame and the Figma footer export (1440). */
+  --text-mono-label: clamp(10.6px, 0.6068rem + 0.2286vw, 13px);
   --text-mono-label--line-height: 18px;
-  --text-mono-label--letter-spacing: 0.06em;
+  --text-mono-label--letter-spacing: clamp(0px, -0.0181rem + 0.0743vw, 0.78px);
+
+  --text-mono-ruler: clamp(9.4px, 0.5457rem + 0.1714vw, 11.2px);
+  --text-mono-ruler--line-height: 16px;
+
+  --text-mono-artwork: clamp(8px, 0.4280rem + 0.2952vw, 11.1px);
+  --text-mono-artwork--line-height: 13px;
+
+  --text-mono-bar: clamp(8.4px, 0.4809rem + 0.1810vw, 10.3px);
+  --text-mono-bar--line-height: 16px;
+
+  --text-mono-switch: clamp(8.9px, 0.5214rem + 0.1429vw, 10.4px);
+  --text-mono-switch--line-height: 14px;
+
+  --text-mono-tagline: clamp(9.75px, 0.5641rem + 0.1857vw, 11.7px);
+  --text-mono-tagline--line-height: 19.1px;
 
   /* Radius, measured from design corners: cards 16, concept/code cards 12, code windows and flow tiles 8. Pills use rounded-full. */
   --radius-sm: 6px;

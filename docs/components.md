@@ -1,6 +1,6 @@
 # Component inventory
 
-Open item: the mobile footer artwork (decision #33), waiting on a Figma link.
+No open items.
 
 The status column tracks build progress: `planned` → `built` → `verified` (checked in the browser against the design PNG at 1440 and 390, light and dark).
 
@@ -39,7 +39,8 @@ The status column tracks build progress: `planned` → `built` → `verified` (c
 | Component | Path | Notes | Status |
 |---|---|---|---|
 | Logo / LogoMark | `components/illustrations/Logo.tsx` | Exact logo-system paths; crescent and wordmark use `currentColor`, ring uses `brand-mark` (decision #22) | built |
-| Hero isometric | `public/images/hero-isometric-{light,dark}.svg` | Unedited Figma exports (decision #21), light and dark | assets ready |
+| Hero isometric | `public/images/hero-isometric-{light,dark}.svg` | Unedited Figma exports (decision #21), light and dark | verified |
+| Footer artwork (mobile) | `public/images/footer-artwork-{light,dark}.png` | Unedited Figma exports, pixelated rendering (decision #39) | verified |
 
 ## Dev
 | Route | Purpose | Status |
