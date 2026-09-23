@@ -16,8 +16,9 @@ export function EngineeringNotes() {
           {articles.map((article) => (
             <li key={article.slug} className="border-b border-border px-[6px] pb-[22.7px] md:pb-[22px]">
               <Link href={`/engineering/${article.slug}`} className="group/article block">
-                <div className="aspect-[337/191] overflow-hidden md:aspect-[406/202] rounded-lg border border-border bg-muted transition-transform duration-500 ease-fenon group-hover/article:scale-[1.01]">
-                  <ArticleArt kind={article.illustration} />
+                <div className="relative aspect-[337/191] overflow-hidden rounded-lg border border-border bg-muted transition-transform duration-500 ease-fenon group-hover/article:scale-[1.01] md:aspect-[406/202]">
+                  {/* Covers the border box so design-measured coordinates (card outer edge) map 1:1. */}
+                  <ArticleArt kind={article.illustration} className="absolute -inset-px h-[calc(100%+2px)] w-[calc(100%+2px)]" />
                 </div>
                 <p className="mt-[26px] font-mono text-mono-caption md:mt-[29px] text-muted-foreground uppercase">{article.category}</p>
                 <h3 className="mt-[14px] max-w-[330px] text-title">{article.title}</h3>

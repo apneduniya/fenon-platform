@@ -1,6 +1,6 @@
 # Component inventory
 
-Open item: the mobile footer artwork (decision #33).
+Open item: the mobile footer artwork (decision #33), waiting on a Figma link.
 
 The status column tracks build progress: `planned` → `built` → `verified` (checked in the browser against the design PNG at 1440 and 390, light and dark).
 

@@ -1,11 +1,7 @@
 import { z } from "zod"
 
-export const CONTACT_WORKLOADS = [
-  "Robotics inference",
-  "Reasoning & planning",
-  "World-model inference",
-  "Policies & actions",
-] as const
+// Single option, exactly as designed (decision #37).
+export const CONTACT_WORKLOADS = ["Robotics inference"] as const
 
 export const contactSchema = z.object({
   email: z.email("Enter a valid work email."),
