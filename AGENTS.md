@@ -118,6 +118,7 @@ Rules:
 ## Workflow
 
 - Commands: `bun dev`, `bun run build`, `bun run lint` (includes `lint:tokens`).
+- Deployment: Vercel project `apneduniyas-projects/fenon-platform`, connected to GitHub `apneduniya/fenon-platform`. Every push to `main` deploys to production (https://fenon-platform.vercel.app); other branches get previews. Prefer deploying by pushing over `vercel deploy`; `.vercelignore` keeps the local design folder out of CLI uploads.
 - If newly added Tailwind classes don't apply in dev, restart `bun dev` (Turbopack can miss files replaced in place; decision #34).
 - Design measurements: crop the PNGs at full resolution (4× for 1440) and compare glyph bands and DOM landmarks. Don't eyeball.
 - Build order: theme foundation → setup → primitives → sections one by one → routes/modals.
