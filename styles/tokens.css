@@ -1,0 +1,97 @@
+/*
+ * Layer 2: semantic tokens, as shadcn surface/-foreground pairs.
+ * Only var(--fenon-*) references are allowed here, never raw values.
+ */
+:root,
+.light {
+  color-scheme: light;
+
+  --background: var(--fenon-paper);
+  --foreground: var(--fenon-ink);
+  --card: var(--fenon-paper);
+  --card-foreground: var(--fenon-ink);
+  --popover: var(--fenon-paper);
+  --popover-foreground: var(--fenon-ink);
+  --primary: var(--fenon-orange);
+  --primary-foreground: var(--fenon-ink);
+  --secondary: var(--fenon-stone-100);
+  --secondary-foreground: var(--fenon-ink);
+  --muted: var(--fenon-stone-50);
+  --muted-foreground: var(--fenon-stone-600);
+  --accent: var(--fenon-stone-100);
+  --accent-foreground: var(--fenon-ink);
+  --destructive: var(--fenon-rust);
+  --border: var(--fenon-stone-200);
+  --input: var(--fenon-stone-200);
+  --ring: var(--fenon-orange);
+
+  --chart-1: var(--fenon-orange);
+  --chart-2: color-mix(in oklab, var(--fenon-stone-400) 55%, transparent);
+  --chart-3: var(--fenon-ink);
+  --chart-4: var(--fenon-stone-200);
+  --chart-5: var(--fenon-rust);
+
+  /* Fenon extensions */
+  --announcement: var(--fenon-orange);
+  --announcement-foreground: var(--fenon-ink);
+  --nav: var(--fenon-stone-100);
+  --nav-foreground: var(--fenon-ink);
+  --code: var(--fenon-stone-50);
+  --code-foreground: var(--fenon-ink);
+  --syntax-accent: var(--fenon-rust);
+  --syntax-comment: var(--fenon-stone-600);
+  --grid-cell: var(--fenon-stone-200);
+  --grid-cell-active: var(--fenon-orange);
+  --wordmark: var(--fenon-grey-300);
+  --dot-grid: var(--fenon-stone-200);
+  /* Section eyebrows: ink in light, orange in dark (per the dark design frames). */
+  --eyebrow: var(--fenon-ink);
+  /* The logo's orange is fixed across themes (logo system: "never recolor the orange"). */
+  --brand-mark: var(--fenon-orange);
+
+  --radius: 12px;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: var(--fenon-black);
+  --foreground: var(--fenon-paper);
+  --card: var(--fenon-black);
+  --card-foreground: var(--fenon-paper);
+  --popover: var(--fenon-graphite-900);
+  --popover-foreground: var(--fenon-paper);
+  --primary: var(--fenon-orange);
+  --primary-foreground: var(--fenon-ink);
+  --secondary: var(--fenon-graphite-800);
+  --secondary-foreground: var(--fenon-paper);
+  --muted: var(--fenon-graphite-900);
+  --muted-foreground: var(--fenon-graphite-300);
+  --accent: var(--fenon-graphite-800);
+  --accent-foreground: var(--fenon-paper);
+  --destructive: var(--fenon-orange-soft);
+  --border: var(--fenon-graphite-700);
+  --input: var(--fenon-graphite-700);
+  --ring: var(--fenon-orange);
+
+  --chart-1: var(--fenon-orange);
+  --chart-2: color-mix(in oklab, var(--fenon-paper) 80%, transparent);
+  --chart-3: var(--fenon-paper);
+  --chart-4: var(--fenon-graphite-700);
+  --chart-5: var(--fenon-orange-soft);
+
+  --announcement: var(--fenon-orange);
+  --announcement-foreground: var(--fenon-ink);
+  --nav: var(--fenon-graphite-800);
+  --nav-foreground: var(--fenon-paper);
+  --code: var(--fenon-graphite-900);
+  --code-foreground: var(--fenon-paper);
+  --syntax-accent: var(--fenon-orange-soft);
+  --syntax-comment: var(--fenon-graphite-300);
+  --grid-cell: var(--fenon-graphite-700);
+  --grid-cell-active: var(--fenon-orange);
+  --wordmark: var(--fenon-grey-500);
+  --dot-grid: var(--fenon-graphite-700);
+  --eyebrow: var(--fenon-orange);
+  --brand-mark: var(--fenon-orange);
+}

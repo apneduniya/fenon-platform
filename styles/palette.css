@@ -1,0 +1,28 @@
+/*
+ * Layer 1: brand primitives. This is the only file allowed to contain raw colour values.
+ * Components never reference these; use semantic tokens from tokens.css.
+ * Sources: Figma exports (footer, hero, logo system) plus sampling of the design PNGs. See docs/design-tokens.md.
+ */
+:root {
+  --fenon-orange: oklch(0.6749 0.2181 38.45); /* #FF5402 */
+  --fenon-orange-soft: oklch(0.7491 0.1597 43.64); /* #FF8853 */
+  --fenon-rust: oklch(0.4852 0.149 39.14); /* #A1370A */
+
+  --fenon-ink: oklch(0.1431 0.0028 145.43); /* #090A09 */
+  --fenon-black: oklch(0 0 0); /* #000000 */
+  --fenon-paper: oklch(1 0 0); /* #FFFFFF */
+
+  --fenon-stone-50: oklch(0.969 0.0053 106.5); /* #F5F5F1 */
+  --fenon-stone-100: oklch(0.9444 0.008 106.55); /* #EDEDE7 */
+  --fenon-stone-200: oklch(0.8828 0.0122 106.65); /* #D9D9D0 */
+  --fenon-stone-400: oklch(0.6802 0.0176 118.28); /* #979A8E */
+  --fenon-stone-600: oklch(0.4853 0.0097 121.82); /* #5E605A */
+
+  --fenon-graphite-300: oklch(0.71 0.008 80.72); /* #A4A19C */
+  --fenon-graphite-700: oklch(0.2859 0.0061 134.93); /* #292B28 */
+  --fenon-graphite-800: oklch(0.2278 0.0048 145.41); /* #1B1D1B */
+  --fenon-graphite-900: oklch(0.1761 0.0026 145.46); /* #101110 */
+
+  --fenon-grey-300: oklch(0.8607 0 0); /* #D1D1D1 */
+  --fenon-grey-500: oklch(0.6066 0 0); /* #828282 */
+}

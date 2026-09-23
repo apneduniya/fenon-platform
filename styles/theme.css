@@ -1,0 +1,215 @@
+/*
+ * Layer 3: Tailwind mapping. Semantic tokens become utilities (bg-card, text-muted-foreground, ...),
+ * plus the type scale, radius, layout and motion tokens.
+ * Fluid values interpolate linearly between the 390px and 1440px design frames, so both frames match exactly.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* Reset Tailwind's default palette first, so only Fenon tokens exist as colour utilities. */
+  --color-*: initial;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-announcement: var(--announcement);
+  --color-announcement-foreground: var(--announcement-foreground);
+  --color-nav: var(--nav);
+  --color-nav-foreground: var(--nav-foreground);
+  --color-code: var(--code);
+  --color-code-foreground: var(--code-foreground);
+  --color-syntax-accent: var(--syntax-accent);
+  --color-syntax-comment: var(--syntax-comment);
+  --color-grid-cell: var(--grid-cell);
+  --color-grid-cell-active: var(--grid-cell-active);
+  --color-wordmark: var(--wordmark);
+  --color-dot-grid: var(--dot-grid);
+  --color-brand-mark: var(--brand-mark);
+  --color-eyebrow: var(--eyebrow);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+@theme {
+  /* Display. Weight 400 throughout (design stem/size ratio matches Inter Regular); tracking solved from measured design line widths. */
+  --text-display-hero: clamp(42px, 1.5571rem + 4.381vw, 88px);
+  --text-display-hero--line-height: clamp(46px, 1.7839rem + 4.4762vw, 93px);
+  --text-display-hero--letter-spacing: -0.063em;
+
+  --text-display-cta: clamp(46px, 1.9929rem + 3.619vw, 84px);
+  --text-display-cta--line-height: clamp(52px, 2.2286rem + 4.1905vw, 96px);
+  --text-display-cta--letter-spacing: -0.063em;
+
+  --text-display: clamp(38px, 1.8643rem + 2.0952vw, 60px);
+  --text-display--line-height: clamp(42.5px, 2.0991rem + 2.2857vw, 66.5px);
+  --text-display--letter-spacing: -0.047em;
+
+  /* Modal / page titles (contact, articles): 36.6px measured from the 808px card frames */
+  --text-display-sm: clamp(32px, 1.8932rem + 0.4381vw, 36.6px);
+  --text-display-sm--line-height: 1.1;
+  --text-display-sm--letter-spacing: -0.047em;
+
+  /* Headings */
+  --text-heading-lg: clamp(26px, 1.5321rem + 0.381vw, 30px);
+  --text-heading-lg--line-height: clamp(30px, 1.7647rem + 0.4524vw, 34.75px);
+  --text-heading-lg--letter-spacing: -0.038em;
+
+  --text-heading: clamp(24px, 1.4071rem + 0.381vw, 28px);
+  --text-heading--line-height: clamp(28px, 1.6513rem + 0.4048vw, 32.25px);
+  --text-heading--letter-spacing: -0.045em;
+
+  --text-heading-sm: 24px;
+  --text-heading-sm--line-height: 28.8px;
+  --text-heading-sm--letter-spacing: -0.045em;
+
+  --text-title: 26px;
+  --text-title--line-height: 30.75px;
+  --text-title--letter-spacing: -0.045em;
+
+  --text-tab: clamp(16px, 0.8607rem + 0.5714vw, 22px);
+  --text-tab--line-height: clamp(20px, 1.0991rem + 0.6190vw, 26.5px);
+  --text-tab--letter-spacing: -0.04em;
+
+  /* Body */
+  --text-lede-lg: clamp(16px, 0.9536rem + 0.1905vw, 18px);
+  --text-lede-lg--line-height: clamp(24px, 1.3955rem + 0.4286vw, 28.5px);
+  --text-lede-lg--letter-spacing: -0.01em;
+
+  --text-lede-md: 15px;
+  --text-lede-md--line-height: 25px;
+  --text-lede-md--letter-spacing: -0.027em;
+
+  --text-lede: clamp(14px, 0.8286rem + 0.1905vw, 16px);
+  --text-lede--line-height: clamp(23.4px, 1.3789rem + 0.3429vw, 27px);
+  --text-lede--letter-spacing: -0.027em;
+
+  --text-body: clamp(13px, 0.7893rem + 0.0952vw, 14px);
+  --text-body--line-height: 22px;
+  --text-body--letter-spacing: -0.034em;
+
+  --text-body-xs: clamp(11px, 0.6643rem + 0.0952vw, 12px);
+  --text-body-xs--line-height: 18px;
+  --text-body-xs--letter-spacing: -0.02em;
+
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: -0.03em;
+
+  /* Announcement bar copy */
+  --text-caption: clamp(10.7px, 0.6154rem + 0.2190vw, 13px);
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: -0.03em;
+
+  /* Mono */
+  /* Hero figure caption and motion toggle: tiny on mobile, eyebrow-sized on desktop. */
+  --text-mono-figure: clamp(7.8px, 0.3668rem + 0.4952vw, 13px);
+  --text-mono-figure--line-height: clamp(12px, 0.6107rem + 0.5714vw, 18px);
+
+  --text-mono-md: clamp(10px, 0.5554rem + 0.2857vw, 13px);
+  --text-mono-md--line-height: clamp(14px, 0.7821rem + 0.381vw, 18px);
+  --text-mono-md--letter-spacing: 0em;
+
+  --text-mono-sm: clamp(10.7px, 0.6502rem + 0.0762vw, 11.5px);
+  --text-mono-sm--line-height: 16px;
+  --text-mono-sm--letter-spacing: 0em;
+
+  --text-mono-code: clamp(8.6px, 0.4864rem + 0.2095vw, 10.8px);
+  --text-mono-code--line-height: clamp(18px, 1.0612rem + 0.2619vw, 20.75px);
+
+  --text-mono-code-lg: clamp(8.7px, 0.4741rem + 0.2857vw, 11.7px);
+  --text-mono-code-lg--line-height: clamp(19px, 1.0714rem + 0.4762vw, 24px);
+
+  --text-mono-caption: 10.3px;
+  --text-mono-caption--line-height: 14px;
+  --text-mono-caption--letter-spacing: 0.04em;
+
+  /* Footer links and tagline */
+  --text-mono-link: clamp(10.8px, 0.6541rem + 0.0857vw, 11.7px);
+  --text-mono-link--line-height: 24px;
+
+  --text-mono-xs: clamp(8px, 0.4652rem + 0.1429vw, 9.5px);
+  --text-mono-xs--line-height: 13px;
+
+  /* Chart captions scale with the figure (≈5.2px on the 390 frame). */
+  --text-mono-micro: clamp(5.2px, 0.2252rem + 0.4095vw, 9.5px);
+  --text-mono-micro--line-height: 1.3;
+
+  /* Footer wordmark: Inter Bold 244px matches the design glyph height (177.5px ascender); tracking matches its 686px width. Mobile value provisional. */
+  --text-display-wordmark: clamp(96px, 2.5286rem + 14.0952vw, 244px);
+  --text-display-wordmark--line-height: 0.8;
+  --text-display-wordmark--letter-spacing: 0.05em;
+  --text-display-wordmark--font-weight: 700;
+
+  /* Mono label: footer column titles, tracked slightly wider than eyebrows */
+  --text-mono-label: 13px;
+  --text-mono-label--line-height: 18px;
+  --text-mono-label--letter-spacing: 0.06em;
+
+  /* Radius, measured from design corners: cards 16, concept/code cards 12, code windows and flow tiles 8. Pills use rounded-full. */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+
+  /* Layout: 72px gutters on the 1440 frame and 20px on 390, so the content max is 1296px. */
+  --spacing-gutter: clamp(20px, 0.0429rem + 4.9524vw, 72px);
+  --container-page: 1440px;
+  --container-content: 1296px;
+
+  /* Motion (transform/opacity only) */
+  --ease-fenon: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-fill: fill 1.6s var(--ease-fenon) both;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -8px, 0);
+    }
+  }
+
+  @keyframes fill {
+    from {
+      transform: scaleX(0);
+    }
+  }
+}
+
+/* Footer texture from Figma (dotgrid.png): a 2px dot every 20px at ~47% opacity, rebuilt in CSS so it follows the theme. */
+@utility bg-dot-grid-pattern {
+  background-image: radial-gradient(
+    circle at 10px 10.5px,
+    color-mix(in oklab, var(--dot-grid) 47%, transparent) 1px,
+    transparent 1.25px
+  );
+  background-size: 20px 20px;
+}
