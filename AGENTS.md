@@ -10,7 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # Fenon platform — agent guide
 
-Marketing site for Fenon (inference infrastructure for robotics), built from the design exports in `fenon_full_web_design/`.
+Marketing site for Fenon (inference infrastructure for robotics), built from the design exports in `fenon_full_web_design/`. That folder is local reference only and is git-ignored (decision #41). Get it from the team's Figma file if it's missing.
 
 Priority order when guidance conflicts: **Next.js docs (`node_modules/next/dist/docs/`) → this file → user preferences**. If you find a conflict, flag it to the user and record the outcome in `docs/decisions.md`.
 
