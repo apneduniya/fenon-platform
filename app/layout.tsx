@@ -1,7 +1,11 @@
 import type { Metadata, Viewport } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
+import { AnnouncementBar } from "@/components/layout/AnnouncementBar"
+import { SiteFooter } from "@/components/layout/SiteFooter"
+import { SiteHeader } from "@/components/layout/SiteHeader"
 import { brandColors } from "@/lib/brand-colors"
 import { themeInitScript } from "@/lib/theme"
+import { Providers } from "./providers"
 import "./globals.css"
 
 const inter = Inter({
@@ -53,7 +57,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body id="top">{children}</body>
+      <body id="top">
+        <Providers>
+          <AnnouncementBar />
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </Providers>
+      </body>
     </html>
   )
 }
