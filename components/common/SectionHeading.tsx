@@ -13,10 +13,10 @@ interface SectionHeadingProps {
 export function SectionHeading({ heading, className, titleClassName }: SectionHeadingProps) {
   const titleId = `${heading.id}-title`
   return (
-    <div className={cn("grid gap-6 lg:grid-cols-[1fr_374px] lg:items-end lg:gap-10", className)}>
+    <div className={cn("grid gap-[18px] lg:grid-cols-[1fr_374px] lg:items-end lg:gap-10", className)}>
       <div>
         <Eyebrow className="text-eyebrow">{heading.eyebrow}</Eyebrow>
-        <h2 id={titleId} className={cn("mt-[7px] text-display lg:mt-[18px]", titleClassName)}>
+        <h2 id={titleId} className={cn("mt-[13px] text-display lg:mt-[18px]", titleClassName)}>
           <Lines lines={heading.title} />
         </h2>
       </div>

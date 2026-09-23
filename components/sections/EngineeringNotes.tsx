@@ -9,12 +9,12 @@ import { engineeringNotes } from "@/content/home"
 export function EngineeringNotes() {
   const { heading, linkLabel } = engineeringNotes
   return (
-    <section id={heading.id} aria-labelledby={`${heading.id}-title`} className="scroll-mt-8 pt-[79px] lg:pt-[119px]">
+    <section id={heading.id} aria-labelledby={`${heading.id}-title`} className="scroll-mt-8 pt-[78px] lg:pt-[119px]">
       <Container>
         <SectionHeading heading={heading} />
-        <ul className="mt-[30px] grid gap-10 md:mt-[39px] md:grid-cols-3 md:gap-5">
+        <ul className="mt-[30px] grid gap-[35px] md:mt-[41px] md:grid-cols-3 md:gap-5">
           {articles.map((article) => (
-            <li key={article.slug} className="border-b border-border px-[6px] pb-[22px]">
+            <li key={article.slug} className="border-b border-border px-[6px] pb-[22.7px] md:pb-[22px]">
               <Link href={`/engineering/${article.slug}`} className="group/article block">
                 <div className="aspect-[337/191] overflow-hidden md:aspect-[406/202] rounded-lg border border-border bg-muted transition-transform duration-500 ease-fenon group-hover/article:scale-[1.01]">
                   <ArticleArt kind={article.illustration} />

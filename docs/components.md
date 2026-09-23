@@ -61,6 +61,6 @@ The status column tracks build progress: `planned` → `built` → `verified` (c
 ## Routes
 | Route | Design reference | Status |
 |---|---|---|
-| `/` | `Fenon/*` | verified (1440 and 390, light and dark; landmarks within ~3px desktop and ~15px mobile) |
+| `/` | `Fenon/*` | verified (1440 and 390, light and dark; landmarks within ±2px desktop, ±1.3px mobile) |
 | `/contact` (+ modal) | `Contact form/{Desktop,Mobile}/*.png` | verified |
 | `/engineering/[slug]` (+ modal) | `Engineering article/*/*.png` | verified |

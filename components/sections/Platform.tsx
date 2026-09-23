@@ -36,17 +36,25 @@ function CardIntro({
 export function Platform() {
   const { heading, modelFirst, connected, scale } = platform
   return (
-    <section id={heading.id} aria-labelledby={`${heading.id}-title`} className="scroll-mt-8 pt-[78px] lg:pt-[114px]">
+    <section id={heading.id} aria-labelledby={`${heading.id}-title`} className="scroll-mt-8 pt-[74px] lg:pt-[114px]">
       <Container>
         <SectionHeading heading={heading} />
 
-        <div className="mt-[34px] grid gap-4 lg:mt-10 lg:grid-cols-2 lg:gap-[19px]">
-          <Card className="px-[22px] pt-[23px] pb-[22px] lg:px-[34px] lg:pt-[33px] lg:pb-[28px]">
+        <div className="mt-[30px] grid gap-[15px] lg:mt-10 lg:grid-cols-2 lg:gap-[19px]">
+          <Card className="px-[22px] pt-[23px] pb-[25px] lg:px-[34px] lg:pt-[33px] lg:pb-[28px]">
             <CardIntro {...modelFirst} />
-            <CodeWindow sample={deploymentYaml} footer={modelFirst.note} dots className="mt-[22px] lg:mt-[31px]" footerClassName="py-[23px] lg:py-[19px]" />
+            <CodeWindow
+              sample={deploymentYaml}
+              footer={modelFirst.note}
+              dots
+              className="mt-[25px] lg:mt-[31px]"
+              headerClassName="h-[35px] lg:h-10"
+              bodyClassName="py-[19px] lg:py-5"
+              footerClassName="py-[22.5px] lg:py-[19px]"
+            />
           </Card>
 
-          <Card className="flex flex-col px-[22px] pt-[26px] pb-[100px] lg:px-[34px] lg:pt-[33px] lg:pb-[90px]">
+          <Card className="flex flex-col px-[22px] pt-[26px] pb-[101.5px] lg:px-[34px] lg:pt-[33px] lg:pb-[90px]">
             <CardIntro {...connected} />
             <ol className="mt-auto grid grid-cols-3 items-center gap-[22px] pt-[77px] lg:gap-[41px] lg:pt-12">
               {connected.steps.map((step, i) => {
@@ -79,7 +87,7 @@ export function Platform() {
           </Card>
         </div>
 
-        <Card className="mt-4 grid gap-[14px] px-[22px] pt-[26px] pb-[26px] lg:mt-[19px] lg:grid-cols-[555px_1fr] lg:gap-[60px] lg:px-[34px] lg:pt-[37px] lg:pb-[29px]">
+        <Card className="mt-[15px] grid gap-[14px] px-[22px] pt-[26px] pb-[24.5px] lg:mt-[19px] lg:grid-cols-[555px_1fr] lg:gap-[60px] lg:px-[34px] lg:pt-[37px] lg:pb-[30.5px]">
           <div>
             <CardIntro {...scale} titleClassName="max-w-[410px]" />
             <ul className="mt-5 grid grid-cols-3 gap-[13px] lg:mt-[26px] lg:gap-[26px]">

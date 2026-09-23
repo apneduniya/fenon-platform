@@ -45,7 +45,7 @@ export function Hero() {
           <MotionToggle label={hero.motionLabel} />
         </div>
 
-        <div className="mt-2 grid grid-cols-2 gap-x-4 gap-y-5 border-t border-border pt-2 lg:mt-[18px] lg:pt-[18px] lg:grid-cols-[385fr_312fr_312fr_287fr] lg:gap-0">
+        <div className="mt-[13px] grid grid-cols-2 gap-x-4 gap-y-1 border-t border-border pt-[21px] lg:mt-[18px] lg:pt-[18px] lg:grid-cols-[385fr_312fr_312fr_287fr] lg:gap-0">
           <p className="font-mono text-mono-sm text-muted-foreground uppercase">{hero.capabilitiesLabel}</p>
           <ul className="contents">
             {hero.capabilities.map((item) => (
